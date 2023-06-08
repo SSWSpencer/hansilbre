@@ -1,0 +1,270 @@
+.BuyTop{
+    width: 100%;
+    max-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.RPImage{
+    width: 100%;
+    position: relative;
+    top: -22vh;
+    
+}
+
+.RoutedPageWrapper{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.37);
+    height: 100vh;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    z-index: 0;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.RoutedPageContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+
+.BuySellFormWrapper{
+    width: 40%;
+    background: white;
+    margin: 0 auto;
+    padding: 2%;
+}
+.BSFormRow{
+    display: flex;
+    justify-content: space-between;
+}
+
+.BSFormInput{
+    width: 49%;
+}
+
+.BSFormInput input{
+    width: 100%;
+    font-size: 1rem;
+    padding: 2.5%;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.BSFormInputLong, .BSFormInputLong input, .BSFormInputLong textarea{
+    width: 100%;
+}
+
+.BSFormInputLong input, .BSFormInputLong textarea{
+    width: 100%;
+    font-size: 1rem;
+    padding: 1.25%;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.BSFormInput, .BSFormInputLong{
+    margin-bottom: 4%;
+}
+
+.BSFormInput input:focus, .BSFormInputLong input:focus, .BSFormInputLong textarea:focus{
+    outline: none;
+    border-bottom: 2px solid black;
+}
+
+.BuySellFormWrapper button{
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    padding: 1%;
+    font-size: 1rem;
+    background: rgb(167, 167, 167);
+    border: none;
+    color: white;
+    border-radius: 4px;
+    transition-duration: 0.5s;
+}
+
+.BuySellFormWrapper button:hover{
+    cursor: pointer;
+    transition-duration: 0.5s;
+    background: rgb(109, 109, 109);
+}
+
+.BuySellFormWrapper button:disabled{
+    cursor:not-allowed;
+    /* text-decoration: line-through; */
+    background: rgb(206, 206, 206);
+    /* color: black; */
+    opacity: 0;
+}
+
+.BuySellFormWrapper button:disabled:hover{
+    background: rgb(206, 206, 206);
+    /* color: black; */
+    opacity: 0;
+}
+.bserror{
+    color: red;
+    position: absolute;
+    font-size: 0.8rem;
+    margin-top: 0.1%;
+    margin-left: 0.45%;
+    margin-bottom: 0;
+}
+
+.CommunityWrapper{
+    width: 70%;
+    background: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    align-items: center;
+}
+
+.CommunityLeft{
+    width: 25%;
+}
+
+.CommunityLeft img{
+    width: 100%;
+    position: inherit;
+}
+
+.CommunityRight{
+    width: 70%;
+    padding: 3%;
+}
+
+.CommunityTop h4{
+    margin-bottom: 4%;
+}
+
+.CommunityBottom{
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.CBList{
+    width: 30%;
+}
+
+.CBList ul{
+    padding-left: 8%;
+}
+
+.CBListEntry{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    font-style: italic;
+    margin-left: 0;
+}
+
+
+@media(max-width: 1024px){
+    .RPImage{
+        height: 100vh;
+        width: auto;
+        top: 0vh;
+    }
+
+    .BuySellFormWrapper{
+        width: 80%;
+        padding: 5%;
+    }
+
+    .CommunityWrapper{
+        width: 90%;
+        padding-right: 0;
+    }
+
+    .CommunityLeft{
+        width: 45%;
+    }
+
+    .CommunityLeft img{
+        width: 100%;
+    }
+
+    .CommunityTop{
+        text-align: center;
+    }
+
+    .CommunityBottom{
+        margin-top: 10%;
+        flex-direction: column;
+    }
+    .CBList{
+        width: 100%;
+        margin-top: 2%;
+    }
+    .CBList ul{
+        padding-left: 0;
+    }
+    .CBList ul li{
+        display: inline;
+        list-style: none;
+    }
+    .CBList ul li:after{
+        content: ", ";
+    }
+    .CBList ul li:last-child:after{
+        content: "";
+    }
+}
+
+@media(max-width: 768px){
+    .RPImage{
+        right: 25%;
+    }
+    .CommunityWrapper{
+        flex-direction: column;
+    }
+    .CommunityLeft{
+        display: none;
+    }
+    .CommunityRight{
+        width: 95%;
+    }
+
+    .CommunityBottom{
+        flex-direction: row;
+        margin-top: 2%;
+    }
+
+    .CBList{
+        width: 30%;
+    }
+
+    .CBList ul{
+        padding-left: 8%;
+        list-style-type: disc;
+    }
+
+    .CBList ul li{
+        display: list-item;
+        list-style: disc;
+    }
+}
+
+@media(max-width: 480px){
+
+}

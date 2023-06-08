@@ -1,0 +1,255 @@
+.NavWrapper{
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.MobileNav{
+    display: none;
+}
+
+.NavTop{
+    display: flex;
+    justify-content: center;
+    background: white;
+    z-index: 2;
+}
+
+.NavTopLeft{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.NavTopLeft a{
+    width: 6%;
+    display: block;
+}
+
+.NavTopLeft img{
+    width: 100%;
+    display: block;
+}
+
+.NavSearch{
+    display: flex;
+    align-items: center;
+    background: white;
+    width: 85%;
+    justify-content: space-between;
+    padding: 0.6%;
+    margin: 1% 0 1% 0;
+    border: 1.5pt solid #D3D3D3;
+    border-radius: 3px;
+    transition-duration: 0.5s;
+}
+
+.NavSearch:hover{
+    box-shadow: 0 0 5pt 0.5pt #D3D3D3;
+    transition-duration: 0.5s;
+}
+
+.NavSearch:focus{
+    box-shadow: 0 0 5pt 2pt #D3D3D3;
+    outline-width: 0;
+    transition-duration: 0.5s;
+}
+
+.NavSearch input, .NavSearch select{
+    font-size: 0.9rem;
+    padding: 0.5%;
+    margin-right: 0.5%;
+    border: none;
+}
+
+.NavSearch input{
+    width: 65%;
+}
+
+.NavSearch input:focus, .NavSearch select:focus{
+    outline: none
+}
+
+.NavSearch select{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 30%;
+}
+.NavSearch button{
+    width: 7%;
+    border: none;
+    background: none;
+}
+
+.NavTopRight{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NavTopRight a{
+    color: #3F3B3B;
+    text-decoration: none;
+}
+
+.NavBottom{
+    display: flex;
+    background: #3F3B3B;
+    width: 100%;
+    padding: 0.25%;
+    justify-content: space-evenly;
+    
+}
+
+.NavBottom a{
+    color: white;
+    text-decoration: none;
+}
+
+.BottomHidden{
+    z-index: 1;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp{
+    from {
+        transform: translateY(0%);
+      }
+    
+      to {
+        transform: translateY(-100%);
+      }
+}
+
+.NavTopRightDropdown{
+    display: none;
+}
+
+@media(max-width: 1024px){
+    .NavTopLeft{
+        width: 70%;
+    }
+}
+
+@media(max-width: 768px){
+    .NavTopLeft{
+        width: 90%;
+    }
+    .NavTopRight{
+        position: absolute;
+        top: 65%;
+        left: 100%;
+        background: white;
+        flex-direction: column;
+        width: 30%;
+        font-size: 1.5rem;
+        transition-duration: 1s;
+        z-index: 0;
+    }
+
+    .NavTopRight a{
+        line-height: 3rem;
+        z-index: 0;
+    }
+    .NavTopRightDropdown{
+        display: block;
+        width: 5%;
+        z-index: 1;
+    }
+    .NavTop{
+        align-items: center;
+    }
+    .NavTopRightDropdown button{
+        margin: 0;
+        width: 100%;
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 480px){
+    .NavTop, .NavBottom{
+        display: none;
+    }
+
+    .MobileNav{
+        display: flex;
+        width: 100%;
+        background: white;
+        padding: 1% 5% 2% 5%;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    /* .MobileNavWhite{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: white;
+        left: 0;
+        top: 0;
+    } */
+
+    .MobileNavLeft{
+        width: 10%;
+        position: relative;
+        z-index: 2;
+        display: flex;
+    }
+
+    .MobileNavLeft img{
+        width: 100%;
+        z-index: 2;
+    }
+
+    .NavMobileDropdown{
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        padding: 2%;
+        transition-duration: 1s;
+        z-index: -1;
+    }
+
+    .translateY{
+        transform: translateY(-120%);
+        transition-duration: 1s;
+        z-index: -1;
+    }
+    .NavMobileDropdown a{
+        font-size: 1.25rem;
+        color: black;
+        text-decoration: none;
+        margin-bottom: 0%;
+        margin-left: auto;
+    }
+
+    .NavMobileDropdown hr{
+        margin-top: 0;
+        margin-bottom: 2%;
+    }
+
+    .NavMobileDropdown a:last-child{
+        border-bottom: none;
+    }
+    .NavSearch{
+        width: 100%;
+        margin: 2.5% auto;
+    }
+}

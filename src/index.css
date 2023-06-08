@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1{
+  font-size: 3.5rem;
+}
+h2{
+  font-size: 3.0rem;
+}
+h3{
+  font-size: 2.5rem;
+}
+h4{
+  font-size: 2.1rem;
+}
+h5{
+  font-size: 1.7rem;
+}
+h6{
+  font-size: 1.2rem;
+}
+
+.hide-element {
+  border: 0;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; 
+} 
+
+h1,h2,h3,h4,h5,h6,button,input,textarea{
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: bold;
+}
+
+p,a,span,li,label,option{
+  font-family: "Karla", sans-serif !important;
+}
+
+@media(max-width: 1024px){
+  h1{
+    font-size: 3rem;
+  }
+  h2{
+    font-size:2.6rem;
+  }
+  h3{
+    font-size: 2.4rem;
+  }
+  h4{
+    font-size: 2rem;
+  }
+  h5{
+    font-size: 1.6rem;
+  }
+  h6{
+    font-size:1.2rem;
+  }
+}
+
+@media(max-width: 480px){
+  h1{
+    font-size: 1.6rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 1.4rem;
+  }
+  h4{
+    font-size: 1.3rem;
+  }
+  h5{
+    font-size: 1.2rem;
+  }
+  h6{
+    font-size: 1.1rem;
+  }
+  .HomeFormTitle h6{
+    font-size: 1rem;
+  }
+  .HomeFooter h6{
+    font-size: 0.7rem;
+  }
+  .HomeFooter p{
+    font-size: 0.65rem;
+  }
+}
